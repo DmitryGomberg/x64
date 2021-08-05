@@ -157,9 +157,16 @@ $(document).ready(function () {
       $(".tab_item").hide().eq($(this).index()).fadeIn();
    }).eq(1).addClass("active");
 
-   $('.header__menu-close, .header__bottom-menu').click(function (event) {
+   $('.header__menu-close, .header__bottom-menu, .header__bottom-icon-menu').click(function (event) {
       $('.header__menu').toggleClass('active');
       $('body').toggleClass('lock');
       $('.menu__open').toggleClass('close');
+   });
+
+   $('.panel-heading').removeClass('in').next().slideUp();
+   $('.panel-heading').click(function () {
+      $(this).toggleClass('in').next().slideToggle();
+      $('.panel-heading').not(this).removeClass('in').next().slideUp();
+      event.preventDefault();
    });
 })
