@@ -18,7 +18,7 @@
       <header class="header">
          <div class="header__menu-mob">
             <div class="header__menu-mob-wrap">
-               <div class="header__close-mob">
+               <div class="header__close-mob header__close-mob-menu">
                   <img src="img/close.svg" alt="">
                </div>
                <div class="header__name-mob">КАТАЛОГ</div>
@@ -50,7 +50,7 @@
                      </div>
                   </div>
                </div>
-                <div class="panel">
+               <div class="panel">
                   <div class="panel-heading panel-heading-menu">
                      <a href="#">Аксессуары</a>
                   </div>
@@ -64,7 +64,7 @@
                      </div>
                   </div>
                </div>
-                <div class="panel">
+               <div class="panel">
                   <div class="panel-heading panel-heading-menu">
                      <a href="#">Premium</a>
                   </div>
@@ -109,6 +109,32 @@
                </div>
             </div>
          </div>
+         <div class="header__search">
+            <div class="header__close-mob header__close-mob-search">
+               <img src="img/close.svg" alt="">
+            </div>
+            <div class="header__search-inner">
+               <input type="text" class="header__search-line" placeholder="Что ищем?"/>
+               <div class="header__search-new">
+                  недавние
+                  <ul class="header__search-list">
+                     <li class="header__search-list-item">
+                        <a href="">
+                        мониторы</a>
+                     </li>
+                     <li class="header__search-list-item">
+                        <a href="">
+                        моно блок</a>
+                     </li>
+                     <li class="header__search-list-item">
+                        <a href="">
+                        дис</a>
+                     </li>
+                  </ul>
+                  <div class="header__search-reset">удалить все</div>
+               </div>
+            </div>
+         </div>
          <div class="header__top">
             <div class="container">
                <div class="header__place">
@@ -126,9 +152,20 @@
                      </li>
                      <li class="header__top-menu-item header__top-menu-item-hide"><a href="">Оплата</a></li>
                      <li class="header__top-menu-item"><a href="">Гарантия</a></li>
-                     <li class="header__top-menu-item"><a href="">Помощь</a></li>
+                     <li class="header__top-menu-item header__top-menu-item-help"><a href="">Помощь</a>
+                        <div class="header__top-help-wrap">
+                           <div class="header__top-help">
+                              <div class="header__top-help-title">Помощь</div>
+                              <ul class="header__top-help-list">
+                                 <li class="header__top-help-list-item"><a href="">FAQ</a></li>
+                                 <li class="header__top-help-list-item"><a href="">Контакты</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </li>
                   </ul>
                </div>
+
             </div>
          </div>
          <div class="header__bottom">
