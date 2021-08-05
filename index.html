@@ -15,7 +15,6 @@
 <body>
    <div class="page-wrap">
       <header class="header">
-
          <div class="header__top">
             <div class="container">
                <div class="header__place">
@@ -29,7 +28,8 @@
                <div class="header__top-menu">
                   <ul class="header__top-menu-list">
                      <li class="header__top-menu-item header__top-menu-item-hide"><a href="">Доставка</a></li>
-                     <li class="header__top-menu-item header__top-menu-item-hidden"><a href="">Доставка и оплата</a></li>
+                     <li class="header__top-menu-item header__top-menu-item-hidden"><a href="">Доставка и оплата</a>
+                     </li>
                      <li class="header__top-menu-item header__top-menu-item-hide"><a href="">Оплата</a></li>
                      <li class="header__top-menu-item"><a href="">Гарантия</a></li>
                      <li class="header__top-menu-item"><a href="">Помощь</a></li>
@@ -46,7 +46,9 @@
                </a>
                <div class="header__bottom-menu">
                   <div class="header__bottom-menu-img">
-                     <img src="img/menu-logo.svg" alt="" data-da=".header__bottom-icon-menu, 600, last">
+                     <img src="img/menu-logo.svg" alt="" data-da=".header__bottom-icon-menu, 600, last"
+                        class="menu__open close">
+                     <img src="img/close.svg" alt="" data-da=".header__bottom-icon-menu, 600, last" class="menu__open">
                   </div>
                   <div class="header__bottom-menu-text">
                      Каталог
@@ -91,6 +93,225 @@
                   </div>
                </div>
             </div>
+         </div>
+         <div class="header__menu">
+            <div class="header__menu-close">
+               <img src="img/close.svg" alt="">
+            </div>
+            <div class="header__menu-wrap">
+               <div class="header__menu-left">
+                  <div class="tabs">
+                     <li class="header__tabs-link tab">Акции, скидки и распродажи</li>
+                     <li class="header__tabs-link tab">Ноутбуки и компьютеры</li>
+                     <li class="header__tabs-link tab">Аксессуары</li>
+                     <li class="header__tabs-link tab">Premium</li>
+                  </div>
+                  <div class="header__menu-left-add">
+                     <a class="header__menu-left-add-item" href="">
+                        Конфигуратор
+                     </a>
+                     <a class="header__menu-left-add-item" href="">
+                        Сервис и услуги
+                     </a>
+                  </div>
+               </div>
+               <div class="header__menu-right">
+                  <div class="tab_content">
+                     <div class="tab_item">
+                        <div class="tab_item1">
+                           <div class="tab_item-block">
+                              <div class="tab_item-block-title">Скидки</div>
+                              <ul class="tab_item-block-list">
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                              </ul>
+                           </div>
+                           <div class="tab_item-block">
+                              <div class="tab_item-block-title">Акции</div>
+                              <ul class="tab_item-block-list">
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="tab_item2">
+                           <div class="tab_item-block">
+                              <div class="tab_item-block-title">Скидки</div>
+                              <ul class="tab_item-block-list">
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                              </ul>
+                           </div>
+                           <div class="tab_item-block">
+                              <div class="tab_item-block-title">Акции</div>
+                              <ul class="tab_item-block-list">
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="tab_item3">
+                           <div class="tab_item-block">
+                              <div class="tab_item-block-title">Скидки</div>
+                              <ul class="tab_item-block-list">
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tab_item">
+                        <div class="tab_item1">
+                           <div class="tab_item-block">
+                              <div class="tab_item-block-title">Ноутбуки</div>
+                              <ul class="tab_item-block-list">
+                                 <li class="tab_item-block-list-item"><a href="">Все ноутбуки</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Игровые ноутбуки</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Ноутбуки-трансформеры</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Ультрабуки</a></li>
+                              </ul>
+                           </div>
+                           <div class="tab_item-block">
+                              <div class="tab_item-block-title">Мониторы</div>
+                              <ul class="tab_item-block-list">
+                                 <li class="tab_item-block-list-item"><a href="">LED панели</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">4К мониторы</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Игровые мониторы</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Мониторы 23-26 дюйма</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Мониторы 27-30 дюймов</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="tab_item2">
+                           <div class="tab_item-block">
+                              <div class="tab_item-block-title">Компьютеры</div>
+                              <ul class="tab_item-block-list">
+                                 <li class="tab_item-block-list-item"><a href="">Системные блоки</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Игровые системные блоки</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Моноблоки</a></li>
+                              </ul>
+                           </div>
+                           <div class="tab_item-block">
+                              <div class="tab_item-block-title">Мониторы</div>
+                              <ul class="tab_item-block-list">
+                                 <li class="tab_item-block-list-item"><a href="">LED панели</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">4К мониторы</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Игровые мониторы</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Мониторы 23-26 дюйма</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Мониторы 27-30 дюймов</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="tab_item3">
+                           <div class="tab_item-block">
+                              <div class="tab_item-block-title">Компьютерные комплектующие</div>
+                              <ul class="tab_item-block-list">
+                                 <li class="tab_item-block-list-item"><a href="">Жесткие диски HDD и SSD</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Видеокарты</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Процессоры</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Оперативная память</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Материнские платы</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Корпуса</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Блоки питания</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Системы охлаждения компьютера</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Звуковые карты</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Оптические приводы</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tab_item">
+                        <div class="tab_item1">
+                           <div class="tab_item-block">
+                              <div class="tab_item-block-title">Аксессуары</div>
+                              <ul class="tab_item-block-list">
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                              </ul>
+                           </div>
+                           <div class="tab_item-block">
+                              <div class="tab_item-block-title">Аксессуары</div>
+                              <ul class="tab_item-block-list">
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="tab_item2">
+                           <div class="tab_item-block">
+                              <div class="tab_item-block-title">Аксессуары</div>
+                              <ul class="tab_item-block-list">
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                              </ul>
+                           </div>
+                           <div class="tab_item-block">
+                              <div class="tab_item-block-title">Аксессуары</div>
+                              <ul class="tab_item-block-list">
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="tab_item3">
+                           <div class="tab_item-block">
+                              <div class="tab_item-block-title">Аксессуары</div>
+                              <ul class="tab_item-block-list">
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tab_item">
+                        <div class="tab_item1">
+                           <div class="tab_item-block">
+                              <div class="tab_item-block-title">Premium</div>
+                              <ul class="tab_item-block-list">
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="tab_item2">
+                           <div class="tab_item-block">
+                              <div class="tab_item-block-title">Premium</div>
+                              <ul class="tab_item-block-list">
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                                 <li class="tab_item-block-list-item"><a href="">Lorem, ipsum dolor.</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
          </div>
       </header>
    </div>
