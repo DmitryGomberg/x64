@@ -416,7 +416,7 @@ input:focus {
    position: absolute;
    display: inline-block;
    top: -5px;
-   right: -15px;
+   right: -10px;
    padding: 4px 5px;
    background: #DE0F07;
    border-radius: 9px;
@@ -901,7 +901,9 @@ input:focus {
    color: #000000;
    margin-top: 4px;
 }
-
+.header__top-help-list-item>a{
+   color: inherit;
+}
 .panel {}
 
 .panel-heading-menu {
@@ -1137,7 +1139,7 @@ input:focus {
       font-size: 18px;
    }
 
-   .header__search-line{
+   .header__search-line {
       font-size: 18px;
       padding-bottom: 4px;
    }
@@ -1155,5 +1157,77 @@ input:focus {
       padding-right: 24px;
       padding-left: 24px;
    }
+}
+
+.header__cart {
+   position: fixed;
+   width: 100%;
+   min-height: 100%;
+    top: 0;
+   left: 0;
+   background: rgba(26, 26, 26, 0.16);
+   backdrop-filter: blur(3px);
+   z-index: 20;
+   overflow-y: scroll;
+   opacity: 0;
+   visibility: hidden;
+   overflow-y: scroll;
+   transition: all .2s ease;
+}
+.header__cart.active{
+   opacity: 1;
+   visibility: visible;
+}
+.header__cart-inner {
+   min-height: 100vh;
+   margin-left: auto;
+   max-width: 700px;
+   background-color: #fff;
+   padding: 64px;
+   overflow: auto;
+   transform: translateX(100%);
+   visibility: hidden;
+   transition: all .2s ease;
+}
+
+.header__cart.active .header__cart-inner {
+   visibility: visible;
+   transform: translateX(0);
+}
+
+
+.header__cart-name {
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 32px;
+   line-height: 37px;
+   color: #1A1A1A;
+   margin-bottom: 48px;
+}
+
+.header__cart-subname {
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 32px;
+   margin-bottom: 12px;
+   color: #1A1A1A;
+}
+
+.header__cart-text {
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 16px;
+   line-height: 24px;
+   color: #9E9E9E;
+   max-width: 315px;
+}
+
+.header__cart-text>a {
+   text-decoration: underline;
+   color: #000;
 }
 
