@@ -152,12 +152,12 @@ $(document).ready(function () {
    const w = $(document).width();
    console.log(w);
    if (w < '600') {
-      $('.header__close-mob-menu, .header__close-mob, .header__bottom-icon-menu').click(function (event) {
+      $('.header__close-mob-menu, .header__bottom-icon-menu').click(function (event) {
          $('.header__menu-mob').toggleClass('active');
          $('body').toggleClass('lock');
       });
    } else {
-      $('.header__menu-close, .header__bottom-menu, .header__bottom-icon-menu').click(function (event) {
+      $('.header__menu-close-mnu, .header__bottom-menu, .header__bottom-icon-menu').click(function (event) {
          $('.header__menu').toggleClass('active');
          $('body').toggleClass('lock');
          $('.menu__open').toggleClass('close');
