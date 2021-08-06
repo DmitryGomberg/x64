@@ -181,7 +181,29 @@ var swiper = new Swiper(".swiper-container-s2", {
       }
    }
 });
-
+var swidsvsvper = new Swiper(".swiper-container-s3", {
+   navigation: {
+      nextEl: ".swiper-button-next-s3",
+      prevEl: ".swiper-button-prev-s3",
+   },
+   breakpoints: {
+      // when window width is >= 320px
+      300: {
+         slidesPerView: 1.2,
+         spaceBetween: 15,
+      },
+      // when window width is >= 480px
+      500: {
+         slidesPerView: 1.5,
+         spaceBetween: 16,
+      },
+      // when window width is >= 640px
+      800: {
+         slidesPerView: 2.2,
+         spaceBetween: 32,
+      }
+   }
+});
 
 $(document).ready(function () {
    const w = $(document).width();
