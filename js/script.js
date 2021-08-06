@@ -204,6 +204,33 @@ var swidsvsvper = new Swiper(".swiper-container-s3", {
       }
    }
 });
+var swidsvsvxczper = new Swiper(".swiper-container-s4", {
+   navigation: {
+      nextEl: ".swiper-button-next-s4",
+      prevEl: ".swiper-button-prev-s4",
+   },
+   breakpoints: {
+      // when window width is >= 320px
+      300: {
+         slidesPerView: 3.3,
+         spaceBetween: 15,
+      },
+      // when window width is >= 480px
+      500: {
+         slidesPerView: 4.3,
+         spaceBetween: 16,
+      },
+      // when window width is >= 640px
+      800: {
+         slidesPerView: 5.3,
+         spaceBetween: 24,
+      },
+      1500: {
+         slidesPerView: 6.5,
+         spaceBetween: 32,
+      }
+   }
+});
 
 $(document).ready(function () {
    const w = $(document).width();

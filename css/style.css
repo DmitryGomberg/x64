@@ -2308,7 +2308,7 @@ input:focus {
    font-style: normal;
    font-weight: 500;
    font-size: 42px;
-   line-height: 48px;
+   line-height: calc(20px  + (48 - 20) * ((100vw - 375px) / (1920 - 375)));
    color: #1A1A1A;
 }
 
@@ -2327,6 +2327,9 @@ input:focus {
 }
 
 .swiper-button-prev-s3 {
+   margin-right: 30px;
+}
+.swiper-button-prev-s4 {
    margin-right: 30px;
 }
 
@@ -2488,11 +2491,19 @@ input:focus {
       max-width: 20px;
    }
 
+   .swiper-button-prev-s4>img {
+      max-width: 20px;
+   }
+
    .swiper-button-next-s2>img {
       max-width: 20px;
    }
 
    .swiper-button-next-s3>img {
+      max-width: 20px;
+   }
+
+   .swiper-button-next-s4>img {
       max-width: 20px;
    }
 }
@@ -2541,7 +2552,7 @@ input:focus {
 .s3-slide-img {
    max-width: 100%;
    overflow: hidden;
-   height: calc(230px  + (540 - 230) * ((100vw - 375px) / (1920 - 375)));
+   height: calc(230px + (540 - 230) * ((100vw - 375px) / (1920 - 375)));
 }
 
 .s3-slide-img>img {
@@ -2554,18 +2565,56 @@ input:focus {
    font-family: Roboto;
    font-style: normal;
    font-weight: 500;
-   font-size: calc(20px  + (32 - 20) * ((100vw - 375px) / (1920 - 375)));
-   line-height: calc(26px  + (37 - 26) * ((100vw - 375px) / (1920 - 375)));
+   font-size: calc(20px + (32 - 20) * ((100vw - 375px) / (1920 - 375)));
+   line-height: calc(26px + (37 - 26) * ((100vw - 375px) / (1920 - 375)));
    color: #1A1A1A;
-   margin-top: calc(8px  + (20 - 8) * ((100vw - 375px) / (1920 - 375)));
-   margin-bottom: calc(4px  + (8 - 4) * ((100vw - 375px) / (1920 - 375)));
+   margin-top: calc(8px + (20 - 8) * ((100vw - 375px) / (1920 - 375)));
+   margin-bottom: calc(4px + (8 - 4) * ((100vw - 375px) / (1920 - 375)));
 }
 
 .s3-slide-subtitle {
    font-family: Roboto;
    font-style: normal;
    font-weight: normal;
-   font-size: calc(14px  + (16 - 14) * ((100vw - 375px) / (1920 - 375)));
-   line-height: calc(20px  + (26 - 20) * ((100vw - 375px) / (1920 - 375)));
+   font-size: calc(14px + (16 - 14) * ((100vw - 375px) / (1920 - 375)));
+   line-height: calc(20px + (26 - 20) * ((100vw - 375px) / (1920 - 375)));
    color: #1A1A1A;
+}
+
+.section4 {}
+
+.section2 {}
+
+.s2-top {}
+
+.s2-title {}
+
+.title {}
+
+.s2-navig {}
+
+.swiper-button-prev-s4 {}
+
+.swiper-button-next-s4 {}
+
+.swiper-container-s3 {}
+
+.swiper-container {}
+
+.swiper-wrapper-s3 {}
+
+.swiper-wrapper {}
+
+.swiper-slide-s3 {}
+
+.swiper-slide {}
+
+.s4-slide-img {
+   width: 100%;
+   overflow: hidden;
+}
+.s4-slide-img>img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
 }
