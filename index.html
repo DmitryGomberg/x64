@@ -136,7 +136,7 @@
                </div>
             </div>
          </div>
-         <div class="header__cart header__cartf-empty">
+         <div class="header__cart header__cart-empty">
             <div class="header__cart-inner">
                <div class="header__close-mob header__close-mob-cart">
                   <img src="img/close.svg" alt="">
@@ -150,12 +150,12 @@
             </div>
          </div>
          <div class="header__cartf header__cart">
-            <div class="header__cart-inner">
+            <div class="header__cart-innerf">
                <div class="header__close-mob header__close-mob-cartf">
                   <img src="img/close.svg" alt="">
                </div>
                <div class="header__cart-main">
-                  <div class="header__cart-name">Корзина/2шт</div>
+                  <div class="header__cart-name">Корзина<span>/2шт</span> </div>
                   <div class="header__cart-list">
                      <div class="header__cart-list-item">
                         <div class="header__cart-list-img">
@@ -175,9 +175,9 @@
                            <img src="img/close.svg" alt="">
                         </div>
                         <div class="header__cart-num-wrap">
-                           <div class="header__cart-num-plus">+</div>
-                           <div class="header__cart-num">1</div>
                            <div class="header__cart-num-minus">-</div>
+                           <div class="header__cart-num">1</div>
+                           <div class="header__cart-num-plus">+</div>
                         </div>
                      </div>
                      <div class="header__cart-list-item">
@@ -198,35 +198,41 @@
                            <img src="img/close.svg" alt="">
                         </div>
                         <div class="header__cart-num-wrap">
-                           <div class="header__cart-num-plus">+</div>
-                           <div class="header__cart-num">1</div>
                            <div class="header__cart-num-minus">-</div>
+                           <div class="header__cart-num">1</div>
+                           <div class="header__cart-num-plus">+</div>
                         </div>
                      </div>
                   </div>
                </div>
                <div class="header__cart-bottom">
                   <div class="header__cart-bottom-top">
-                     <input type="text" class="header__cart-bottom-promo" placeholder="Промокод">
-                     <div class="header__cart-bottom-sell">
-                        -11 790 ₽
+                     <div class="header__cart-bottom-promo-wrap">
+                        <div class="header__cart-bottom-promo-inner">
+                           <input type="text" class="header__cart-bottom-promo" placeholder="Промокод">
+                        </div>
                      </div>
-                     <div class="header__cart-bottom-price">
-                        43 290 ₽
+                     <div class="header__cart-sell-info">
+                        <div class="header__cart-bottom-sell">
+                           -11 790 ₽
+                        </div>
+                        <div class="header__cart-bottom-price">
+                           43 290 ₽
+                        </div>
                      </div>
                   </div>
-                  <div class="header__cart-bottom-submit">
+                  <a class="header__cart-bottom-submit" href="">
                      ОФОРМИТЬ ЗАКАЗ
-                  </div>
+                  </a>
                   <div class="header__cart-bottom-foot">
-                     <div class="header__cart-bottom-foot-chat">
+                     <a class="header__cart-bottom-foot-chat" href="">
                         <img src="img/chat-icon.svg" alt="">
                         Чат с поддержкой
-                     </div>
-                     <div class="header__cart-bottom-foot-chat">
+                     </a>
+                     <a class="header__cart-bottom-foot-share" href="">
                         Поделиться корзиной
                         <img src="img/share.svg" alt="">
-                     </div>
+                     </a>
                   </div>
                </div>
             </div>
@@ -309,7 +315,7 @@
                   <div class="header__bottom-icon header__bottom-icon-bag">
                      <a class="header__bottom-icon-img" href="">
                         <img src="img/bag.svg" alt="">
-                        <div class="header__bottom-icon-num">
+                        <div class="header__bottom-icon-num" data-value="2">
                            2
                         </div>
                      </a>
