@@ -158,6 +158,30 @@ var swipedvsr = new Swiper(".swiper-container-s1", {
    spaceBetween: 30,
 });
 
+var swiper = new Swiper(".swiper-container-s2", {
+   navigation: {
+      nextEl: ".swiper-button-next-s2",
+      prevEl: ".swiper-button-prev-s2",
+   },
+   breakpoints: {
+      // when window width is >= 320px
+      300: {
+         slidesPerView: 1.5,
+         spaceBetween: 15,
+      },
+      // when window width is >= 480px
+      500: {
+         slidesPerView: 3.3,
+         spaceBetween: 16,
+      },
+      // when window width is >= 640px
+      800: {
+         slidesPerView: 4.3,
+         spaceBetween: 32,
+      }
+   }
+});
+
 
 $(document).ready(function () {
    const w = $(document).width();
@@ -184,6 +208,10 @@ $(document).ready(function () {
       $('body').toggleClass('lock');
       event.preventDefault();
    });
+   if (w < '960') {
+      $('.s2-slide-link').text('Добавить');
+   }
+   
    $('.header__registr-link-on-login, .header__close-mob-cart-login, .header__invite-login-registr').click(function (event) {
       $('.header__login').toggleClass('active');
       $('body').toggleClass('lock');
