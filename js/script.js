@@ -240,12 +240,14 @@ $(document).ready(function () {
          $('.header__menu-mob').toggleClass('active');
          $('body').toggleClass('lock');
       });
+      $('.footer__col-title').addClass('panel-heading');
    } else {
       $('.header__menu-close-mnu, .header__bottom-menu, .header__bottom-icon-menu').click(function (event) {
          $('.header__menu').toggleClass('active');
          $('body').toggleClass('lock');
          $('.menu__open').toggleClass('close');
       });
+      $('.footer__col-title').removeClass('panel-heading');
    };
    $('.header__bottom-search, .header__close-mob-search, .header__bottom-icon-search').click(function (event) {
       $('.header__search').toggleClass('active');
