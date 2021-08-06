@@ -1863,3 +1863,248 @@ input:focus {
    }
 
 }
+
+
+.header__login {
+   position: fixed;
+   width: 100%;
+   min-height: 100%;
+   top: 0;
+   left: 0;
+   z-index: 20;
+   background: rgba(26, 26, 26, 0.16);
+   backdrop-filter: blur(3px);
+   opacity: 0;
+   visibility: hidden;
+   overflow-y: scroll;
+   transition: all .2s ease;
+}
+
+.header__login.active {
+   opacity: 1;
+   visibility: visible;
+}
+
+.header__login-inner {
+   min-height: 100%;
+   margin-left: auto;
+   max-width: 573px;
+   background-color: #fff;
+   padding: 50px;
+   transform: translateX(100%);
+   visibility: hidden;
+   transition: all .2s ease;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.header__login.active .header__login-inner {
+   transform: translateX(0);
+   visibility: visible;
+}
+
+.header__close-mob-cart-login {}
+
+.header__login-wrap {
+   max-width: 317px;
+   width: 100%;
+   margin: 0 auto;
+}
+
+.header__invite-name {}
+
+.header__login-name {
+   margin-bottom: 50px;
+}
+
+.header__login-form {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+
+}
+
+.header__login-form-input {
+   padding-bottom: 4px;
+   margin-bottom: 20px;
+   margin-top: 10px;
+   border: none;
+   border-bottom: 1px solid #000;
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 24px;
+   color: #000;
+}
+
+.header__login-form-input::placeholder {
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 24px;
+   color: #9E9E9E;
+}
+
+.header__login-forget-password {
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 12px;
+   line-height: 16px;
+   display: flex;
+   align-items: center;
+   text-align: center;
+   color: #000000;
+   margin-bottom: 48px;
+}
+
+.header__login-login {
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 14px;
+   color: #FFFFFF;
+   padding: 14px;
+   background: #1A1A1A;
+   text-align: center;
+   border: none;
+}
+
+.header__login-regist {
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 12px;
+   line-height: 16px;
+   width: 100%;
+   text-align: center;
+   color: #000000;
+   margin-top: 17px;
+}
+
+@media(max-width: 960px) {
+   .header__login-inner {
+      padding-right: 70px;
+      padding-left: 70px;
+      max-width: 457px;
+   }
+
+   .header__login-wrap {
+      max-width: 100%;
+   }
+}
+
+@media(max-width: 600px) {
+   .header__login-inner {
+      padding-right: 30px;
+      padding-left: 30px;
+      max-width: 375px;
+   }
+
+}
+
+.header__registr {}
+
+.header__registr {
+   position: fixed;
+   width: 100%;
+   min-height: 100%;
+   top: 0;
+   left: 0;
+   z-index: 20;
+   background: rgba(26, 26, 26, 0.16);
+   backdrop-filter: blur(3px);
+   opacity: 0;
+   visibility: hidden;
+   overflow-y: scroll;
+   transition: all .2s ease;
+}
+
+.header__registr.active {
+   opacity: 1;
+   visibility: visible;
+}
+
+.header__registr-inner {
+   min-height: 100%;
+   margin-left: auto;
+   max-width: 573px;
+   background-color: #fff;
+   padding: 50px;
+   transform: translateX(100%);
+   visibility: hidden;
+   transition: all .2s ease;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.header__registr.active .header__registr-inner {
+   transform: translateX(0);
+   visibility: visible;
+}
+
+.header__registr-wrap {
+   max-width: 317px;
+   width: 100%;
+}
+
+.header__login-registr {
+   margin-top: 30px;
+}
+
+.header__close-mob {}
+
+.header__close-mob-cart-registr {}
+
+.header__invite-name {}
+
+.header__login-name {}
+
+.header__login-form {}
+
+.header__login-form-input {}
+
+.header__login-login {}
+
+.header__registr-text {
+   width: 100%;
+   text-align: center;
+   margin-top: 17px;
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 12px;
+   line-height: 16px;
+   color: #9E9E9E;
+}
+
+.header__registr-link-on-login {
+   display: inline-block;
+   color: #000;
+   text-decoration: underline;
+}
+
+@media(max-width: 960px) {
+   .header__registr-inner {
+      padding-right: 70px;
+      padding-left: 70px;
+      max-width: 457px;
+   }
+
+   .header__registr-wrap {
+      max-width: 100%;
+   }
+}
+
+@media(max-width: 600px) {
+   .header__registr-inner {
+      padding-right: 30px;
+      padding-left: 30px;
+      max-width: 375px;
+   }
+
+}

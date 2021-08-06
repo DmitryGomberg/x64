@@ -173,6 +173,22 @@ $(document).ready(function () {
       $('body').toggleClass('lock');
       event.preventDefault();
    });
+    $('.header__registr-link-on-login, .header__close-mob-cart-login, .header__invite-login-registr').click(function (event) {
+      $('.header__login').toggleClass('active');
+      $('body').toggleClass('lock');
+      event.preventDefault();
+   });
+    $('.header__close-mob-cart-registr, .header__login-regist').click(function (event) {
+      $('.header__registr').toggleClass('active');
+      $('body').toggleClass('lock');
+      event.preventDefault();
+   });
+   $('.header__registr-link-on-login').click(function (event) {
+      $('.header__registr').toggleClass('active');
+      $('.header__login').addClass('active');
+      $('body').toggleClass('lock');
+      event.preventDefault();
+   });
    var myvalue = $('.header__bottom-icon-num').data('value');
    $('.header__bottom-icon-bag, .header__close-mob-cart, .header__close-mob-cartf').click(function (event) {
       if (myvalue > 0) {
