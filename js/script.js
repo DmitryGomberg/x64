@@ -148,6 +148,17 @@ class DynamicAdapt {
 const da = new DynamicAdapt("max");
 da.init();
 
+
+
+var swipedvsr = new Swiper(".swiper-container-s1", {
+   pagination: {
+      el: ".swiper-pagination-s1",
+      clickable: true,
+   },
+   spaceBetween: 30,
+});
+
+
 $(document).ready(function () {
    const w = $(document).width();
    console.log(w);
@@ -173,12 +184,12 @@ $(document).ready(function () {
       $('body').toggleClass('lock');
       event.preventDefault();
    });
-    $('.header__registr-link-on-login, .header__close-mob-cart-login, .header__invite-login-registr').click(function (event) {
+   $('.header__registr-link-on-login, .header__close-mob-cart-login, .header__invite-login-registr').click(function (event) {
       $('.header__login').toggleClass('active');
       $('body').toggleClass('lock');
       event.preventDefault();
    });
-    $('.header__close-mob-cart-registr, .header__login-regist').click(function (event) {
+   $('.header__close-mob-cart-registr, .header__login-regist').click(function (event) {
       $('.header__registr').toggleClass('active');
       $('body').toggleClass('lock');
       event.preventDefault();
@@ -191,7 +202,7 @@ $(document).ready(function () {
    });
    let header = $('.header__bottom');
    $(window).scroll(function () {
-      if ($(this).scrollTop() > 10) {
+      if ($(this).scrollTop() > 5) {
          header.addClass('header_fixed');
 
       } else {
