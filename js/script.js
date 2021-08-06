@@ -189,6 +189,15 @@ $(document).ready(function () {
       $('body').toggleClass('lock');
       event.preventDefault();
    });
+   let header = $('.header__bottom');
+   $(window).scroll(function () {
+      if ($(this).scrollTop() > 10) {
+         header.addClass('header_fixed');
+
+      } else {
+         header.removeClass('header_fixed');
+      }
+   });
    var myvalue = $('.header__bottom-icon-num').data('value');
    $('.header__bottom-icon-bag, .header__close-mob-cart, .header__close-mob-cartf').click(function (event) {
       if (myvalue > 0) {

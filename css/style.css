@@ -246,7 +246,6 @@ h6 {
 .header__top {
    width: 100%;
    background: #F5F5F5;
-   border: 1px solid #000000;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -320,7 +319,12 @@ h6 {
    background-color: #fff;
    z-index: 0;
 }
-
+.header__bottom.header_fixed{
+   position: fixed;
+   top: 0;
+   right: 0;
+   width: 100%;
+}
 .header__bottom>.container {
    display: flex;
    justify-content: space-between;
