@@ -168,6 +168,11 @@ $(document).ready(function () {
       $('body').toggleClass('lock');
       event.preventDefault();
    });
+   $('.header__bottom-icon-img-user, .header__close-mob-cart-invite, .header__bottom-link-user').click(function (event) {
+      $('.header__invite').toggleClass('active');
+      $('body').toggleClass('lock');
+      event.preventDefault();
+   });
    var myvalue = $('.header__bottom-icon-num').data('value');
    $('.header__bottom-icon-bag, .header__close-mob-cart, .header__close-mob-cartf').click(function (event) {
       if (myvalue > 0) {

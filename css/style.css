@@ -1671,18 +1671,21 @@ input:focus {
       align-items: stretch;
       width: 100%;
    }
-   .header__cart-sell-info{
+
+   .header__cart-sell-info {
       width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-top: 30px;
    }
-   .header__cart-bottom-sell:after{
+
+   .header__cart-bottom-sell:after {
       left: 0;
       right: auto;
    }
-   .header__cart-bottom-promo-inner{
+
+   .header__cart-bottom-promo-inner {
       max-width: 100%;
    }
 }
@@ -1731,11 +1734,132 @@ input:focus {
       width: 90px;
    }
 
-   .header__cart-bottom-foot-chat{
+   .header__cart-bottom-foot-chat {
       font-size: 12px;
    }
 
-   .header__cart-bottom-foot-share{
+   .header__cart-bottom-foot-share {
       font-size: 12px;
    }
+}
+
+.header__invite {
+   position: fixed;
+   width: 100%;
+   min-height: 100%;
+   top: 0;
+   left: 0;
+   z-index: 20;
+   background: rgba(26, 26, 26, 0.16);
+   backdrop-filter: blur(3px);
+   opacity: 0;
+   visibility: hidden;
+   overflow-y: scroll;
+   transition: all .2s ease;
+}
+
+.header__invite.active {
+   opacity: 1;
+   visibility: visible;
+}
+
+.header__invite-inner {
+   min-height: 100%;
+   margin-left: auto;
+   max-width: 573px;
+   background-color: #fff;
+   padding: 50px;
+   transform: translateX(100%);
+   visibility: hidden;
+   transition: all .2s ease;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.header__invite.active .header__invite-inner {
+   transform: translateX(0);
+   visibility: visible;
+}
+
+.header__invite-wrap {
+   max-width: 317px;
+   margin: 0 auto;
+}
+
+.header__close-mob {}
+
+.header__close-mob-cart-invite {}
+
+.header__invite-name {
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 32px;
+   line-height: 37px;
+   color: #1A1A1A;
+}
+
+.header__invite-subname {
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 16px;
+   line-height: 24px;
+   color: #1A1A1A;
+   margin-top: 12px;
+   margin-bottom: 48px;
+}
+
+.header__invite-login-registr {
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 18px;
+   color: #FFFFFF;
+   padding: 14px;
+   width: 100%;
+   display: block;
+   background: #1A1A1A;
+   text-align: center;
+   cursor: pointer;
+}
+
+.header__invite-gost {
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 12px;
+   line-height: 16px;
+   color: #000000;
+   text-align: center;
+   width: 100%;
+   display: block;
+   margin-top: 17px;
+}
+
+@media(max-width: 960px) {
+   .header__invite-inner {
+      padding-right: 70px;
+      padding-left: 70px;
+      max-width: 457px;
+   }
+
+   .header__invite-wrap {
+      max-width: 100%;
+   }
+
+   .header__invite-login-registr {
+      font-size: 12px;
+   }
+}
+
+@media(max-width: 600px) {
+   .header__invite-inner {
+      padding-right: 30px;
+      padding-left: 30px;
+      max-width: 375px;
+   }
+
 }
