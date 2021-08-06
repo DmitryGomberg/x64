@@ -1730,4 +1730,12 @@ input:focus {
    .header__cart-list-img img {
       width: 90px;
    }
+
+   .header__cart-bottom-foot-chat{
+      font-size: 12px;
+   }
+
+   .header__cart-bottom-foot-share{
+      font-size: 12px;
+   }
 }
