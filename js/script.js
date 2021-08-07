@@ -254,6 +254,11 @@ $(document).ready(function () {
       $('body').toggleClass('lock');
       event.preventDefault();
    });
+   $('.header__close-mob-filter, .filter__open').click(function (event) {
+      $('.header__filter').toggleClass('active');
+      $('body').toggleClass('lock');
+      event.preventDefault();
+   });
    $('.header__bottom-icon-img-user, .header__close-mob-cart-invite, .header__bottom-link-user').click(function (event) {
       $('.header__invite').toggleClass('active');
       $('body').toggleClass('lock');
@@ -262,7 +267,7 @@ $(document).ready(function () {
    if (w < '960') {
       $('.s2-slide-link').text('Добавить');
    }
-   
+
    $('.header__registr-link-on-login, .header__close-mob-cart-login, .header__invite-login-registr').click(function (event) {
       $('.header__login').toggleClass('active');
       $('body').toggleClass('lock');
@@ -286,6 +291,11 @@ $(document).ready(function () {
 
       } else {
          header.removeClass('header_fixed');
+      }
+      if ($(this).scrollTop() > 370) {
+         $('.filter__open').addClass('fix');
+      }else{
+         $('.filter__open').removeClass('fix');
       }
    });
    var myvalue = $('.header__bottom-icon-num').data('value');
