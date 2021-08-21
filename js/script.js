@@ -266,6 +266,7 @@ $(document).ready(function () {
    });
    if (w < '960') {
       $('.s2-slide-link').text('Добавить');
+      $('.a-s1-card-info-date-text-dost').text('доставка');
    }
 
    $('.header__registr-link-on-login, .header__close-mob-cart-login, .header__invite-login-registr').click(function (event) {
@@ -337,9 +338,16 @@ $(document).ready(function () {
    $(".tab-1").click(function () {
       $(".tab-1").removeClass("active").eq($(this).index()).addClass("active");
       $(".tab_item-1").hide().eq($(this).index()).fadeIn();
+
    }).eq(0).addClass("active");
 
 
+   $(".a-s1-card-more").hide();
+   $(".a-s1-card-info-button").click(function () {
+      $(".a-s1-cards-wrap").hide();
+      $(".a-s1-card-more").show();
+      $(".a-s1-title-mob").text('Информация о заказе');
+   });
 
    $('.panel-heading').removeClass('in').next().slideUp();
    $('.panel-heading').click(function () {
