@@ -356,3 +356,24 @@ $(document).ready(function () {
       event.preventDefault();
    });
 });
+
+let myvgfbdSwiper = new Swiper('.slider-block', {
+   slidesPerView: 1,
+   spaceBetween: 30,
+   pagination: {
+      el: ".swiper-pagination-block",
+      clickable: true,
+   },
+})
+
+const sliderNavItems = document.querySelectorAll('.slider-nav__item');
+
+sliderNavItems.forEach((el, index) => {
+   el.setAttribute('data-index', index);
+
+   el.addEventListener('click', (e) => {
+      const index = parseInt(e.currentTarget.dataset.index);
+      console.log(index)
+      myvgfbdSwiper.slideTo(index);
+   });
+});
