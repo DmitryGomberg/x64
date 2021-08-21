@@ -273,6 +273,18 @@ $(document).ready(function () {
       $('body').toggleClass('lock');
       event.preventDefault();
    });
+   $('.header__close-mob-cart-accaunt, .arrow-menu-accaunt').click(function (event) {
+      $('.header__accaunt').toggleClass('active');
+      $('body').toggleClass('lock');
+      event.preventDefault();
+   });
+   if (w < '490') {
+      $('.a-s1-tab').click(function (event) {
+         $('.header__accaunt').toggleClass('active');
+         $('body').toggleClass('lock');
+         event.preventDefault();
+      });
+   }
    $('.header__close-mob-cart-registr, .header__login-regist').click(function (event) {
       $('.header__registr').toggleClass('active');
       $('body').toggleClass('lock');
@@ -294,7 +306,7 @@ $(document).ready(function () {
       }
       if ($(this).scrollTop() > 370) {
          $('.filter__open').addClass('fix');
-      }else{
+      } else {
          $('.filter__open').removeClass('fix');
       }
    });
@@ -319,6 +331,13 @@ $(document).ready(function () {
       $(".tab").removeClass("active").eq($(this).index()).addClass("active");
       $(".tab_item").hide().eq($(this).index()).fadeIn();
    }).eq(1).addClass("active");
+
+   $(".tab_item-1").hide();
+   $(".tab_item-1").eq(0).fadeIn();
+   $(".tab-1").click(function () {
+      $(".tab-1").removeClass("active").eq($(this).index()).addClass("active");
+      $(".tab_item-1").hide().eq($(this).index()).fadeIn();
+   }).eq(0).addClass("active");
 
 
 

@@ -599,7 +599,8 @@ input:focus {
    .header__bottom {
       height: 50px;
    }
-   .header{
+
+   .header {
       height: 50px;
       min-height: 50px;
    }
@@ -2929,7 +2930,8 @@ input:focus {
    vertical-align: middle;
    cursor: pointer;
    margin-right: 14px;
-   width: 14px;
+   width: 100%;
+   max-width: 14px;
    height: 14px;
    transform: translateY(-2px);
 }
@@ -3234,5 +3236,364 @@ input:focus {
       position: fixed;
       z-index: 3;
       top: 85px;
+   }
+}
+
+.custom-radio {
+   position: absolute;
+   z-index: -1;
+   opacity: 0;
+   display: none;
+}
+
+/* для элемента label связанного с .custom-radio */
+.custom-radio+label {
+   display: inline-flex;
+   align-items: center;
+   user-select: none;
+   cursor: pointer;
+}
+
+/* создание в label псевдоэлемента  before со следующими стилями */
+.custom-radio+label::before {
+   content: '';
+   display: inline-block;
+   width: 20px;
+   height: 20px;
+   flex-shrink: 0;
+   flex-grow: 0;
+   border: 1px solid #adb5bd;
+   border-radius: 50%;
+   margin-right: 0.5em;
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: 50% 50%;
+}
+
+/* стили для радиокнопки, находящейся в состоянии checked */
+.custom-radio:checked+label::before {
+   background-image: url(../img/black-round.svg);
+   background-position: center;
+}
+
+/* стили для радиокнопки, находящейся в состоянии disabled */
+.custom-radio:disabled+label::before {
+   background-color: #e9ecef;
+}
+
+.a-section1 {
+   width: 100%;
+   padding-bottom: 130px;
+   padding-top: calc(30px + (50 - 30) * ((100vw - 375px) / (1920 - 375)));
+}
+
+.container {}
+
+.header__bottom {
+   border-bottom: 1px solid rgba(26, 26, 26, 0.16);
+}
+
+.a-s1-container {
+   display: grid;
+   grid-template-columns: 160px 300px;
+   max-width: 620px;
+   width: 100%;
+   margin: 0 auto;
+   column-gap: calc(40px + (150 - 40) * ((100vw - 375px) / (1920 - 375)));
+   padding: 0;
+}
+
+.a-s1-left {
+   max-width: 160px;
+   width: 100%;
+   text-align: right;
+}
+
+.a-s1-info {}
+
+.a-s1-info-name {
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: 500;
+   font-size: calc(26px + (32 - 26) * ((100vw - 375px) / (1920 - 375)));
+   line-height: calc(32px + (36 - 32) * ((100vw - 375px) / (1920 - 375)));
+   text-align: right;
+   color: #1A1A1A;
+}
+
+.a-s1-info-email {
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 24px;
+   margin-bottom: 44px;
+   color: #1A1A1A;
+}
+
+.tabs-1 {}
+
+.a-s1-tab {
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 16px;
+   line-height: 24px;
+   color: #1A1A1A;
+   cursor: pointer;
+   margin-bottom: 20px;
+}
+
+.a-s1-tab.active {
+   font-weight: 500;
+}
+
+.tab-1 {}
+
+.a-s1-right {}
+
+.tab_content-1 {}
+
+.tab_item-1 {}
+
+.a-s1-item {}
+
+.title {}
+
+.a-s1-title {
+   margin-bottom: 55px;
+   font-size: calc(30px + (42 - 30) * ((100vw - 375px) / (1920 - 375)));
+   line-height: calc(36px + (48 - 36) * ((100vw - 375px) / (1920 - 375)));
+}
+
+.a-s1-form {}
+
+.a-s1-line {
+   margin-bottom: 30px;
+   width: 100%;
+}
+
+.a-s1-input {
+   width: 100%;
+   padding: 5px 0;
+   background-color: transparent;
+   border: none;
+   border-bottom: 1px solid #000;
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 24px;
+   color: #000;
+}
+
+.a-s1-input::placeholder {
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 24px;
+   color: #9E9E9E;
+}
+
+.a-s1-line-check {
+   display: flex;
+   margin-top: 48px;
+   margin-bottom: 48px;
+}
+
+.a-s1-line-check>.radio:nth-child(1) {
+   margin-right: 30px;
+}
+
+.a-s1-button-add {
+   display: inline-block;
+   padding: 7px 16px;
+   background: #F5F5F5;
+   margin-top: 20px;
+   cursor: pointer;
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 24px;
+   color: #1A1A1A;
+}
+
+.a-s1-line-privacy {
+   margin-top: 60px;
+
+}
+
+.a-s1-line-privacy a {
+   text-decoration: underline;
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 16px;
+   color: #1A1A1A;
+}
+
+.form-group>label {
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 16px;
+   color: #1A1A1A;
+   display: flex;
+   align-items: flex-start;
+}
+
+.form-group-a label:before {
+   top: 4px;
+}
+
+.form-group input:checked+label:after {
+   top: 3px;
+}
+
+.a-s1-privacy-text {
+   display: inline-block;
+}
+
+
+.a-s1-buttton-submit {
+   width: 100%;
+   padding: 14px 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: #BDBDBD;
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 20px;
+   color: #FFFFFF;
+   border: none;
+   cursor: pointer;
+   transition: background .2s ease;
+}
+
+.a-s1-buttton-submit:hover {
+   background: #9b9696;
+}
+
+@media(max-width: 960px) {
+   .a-s1-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 520px;
+   }
+
+   .a-s1-tab {
+      margin-bottom: 14px;
+   }
+
+   .a-s1-title {
+      margin-bottom: 45px;
+   }
+}
+
+@media(max-width: 600px) {
+   .a-s1-container {
+      padding-right: 20px;
+      padding-left: 20px;
+   }
+}
+
+.header__accaunt {
+   position: fixed;
+   width: 100%;
+   min-height: 100%;
+   top: 0;
+   left: 0;
+   z-index: 20;
+   background: rgba(26, 26, 26, 0.16);
+   backdrop-filter: blur(3px);
+   opacity: 0;
+   visibility: hidden;
+   overflow-y: scroll;
+   transition: all .2s ease;
+}
+
+.header__accaunt.active {
+   opacity: 1;
+   visibility: visible;
+}
+
+.header__accaunt-inner {
+   min-height: 100%;
+   margin-left: auto;
+   max-width: 573px;
+   background-color: #fff;
+   padding: 64px 30px;
+   transform: translateX(100%);
+   visibility: hidden;
+   transition: all .2s ease;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.header__accaunt.active .header__accaunt-inner {
+   transform: translateX(0);
+   visibility: visible;
+   max-width: 320px;
+   width: 100%;
+}
+
+.header__accaunt-wrap {
+   width: 100%;
+   text-align: left;
+}
+
+.header__close-mob {}
+
+.header__close-mob-cart-accaunt {}
+
+.header__account-main>* {
+   text-align: left;
+}
+
+.header__account-main {}
+
+.header__account-tabs {}
+
+.a-s1-item-back {
+   display: none;
+}
+
+@media(max-width: 490px) {
+   .a-s1-left {
+      display: none;
+   }
+
+   .a-s1-title {
+      max-width: 260px;
+   }
+
+   .a-s1-item-back {
+      display: block;
+      margin-bottom: 33px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: #1A1A1A;
+   }
+
+   .arrow-menu-accaunt {
+      max-width: 20px;
+      margin-right: 9px;
+      position: relative;
+      top: 1px;
+   }
+
+   .a-s1-info-name {
+      max-width: 80px;
    }
 }
