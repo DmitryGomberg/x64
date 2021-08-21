@@ -341,6 +341,14 @@ $(document).ready(function () {
 
    }).eq(0).addClass("active");
 
+   $(".tab_item-2").hide();
+   $(".tab_item-2").eq(0).fadeIn();
+   $(".tab-2").click(function () {
+      $(".tab-2").removeClass("active").eq($(this).index()).addClass("active");
+      $(".tab_item-2").hide().eq($(this).index()).fadeIn();
+
+   }).eq(0).addClass("active");
+
 
    $(".a-s1-card-more").hide();
    $(".a-s1-card-info-button").click(function () {
