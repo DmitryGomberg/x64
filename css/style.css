@@ -621,9 +621,8 @@ input:focus {
 }
 
 .header__menu {
-   position: absolute;
+   position: fixed;
    width: 100%;
-   top: 100%;
    min-height: calc(100vh - 106px);
    border-top: 1px solid rgba(26, 26, 26, 0.16);
    overflow-y: scroll;
