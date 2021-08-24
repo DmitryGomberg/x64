@@ -181,6 +181,34 @@ var swiper = new Swiper(".swiper-container-s2", {
       }
    }
 });
+var swiper = new Swiper(".swiper-container-y-1", {
+   navigation: {
+      nextEl: ".swiper-button-next-y-1",
+      prevEl: ".swiper-button-prev-y-1",
+   },
+   breakpoints: {
+      // when window width is >= 320px
+      300: {
+         slidesPerView: 2.1,
+         spaceBetween: 15,
+      },
+      // when window width is >= 480px
+      500: {
+         slidesPerView: 3.3,
+         spaceBetween: 16,
+      },
+      // when window width is >= 640px
+      900: {
+         slidesPerView: 4.5,
+         spaceBetween: 32,
+      },
+      // when window width is >= 640px
+      1320: {
+         slidesPerView: 6.5,
+         spaceBetween: 32,
+      }
+   }
+});
 var swidsvsvper = new Swiper(".swiper-container-s3", {
    navigation: {
       nextEl: ".swiper-button-next-s3",
@@ -240,14 +268,14 @@ $(document).ready(function () {
          $('.header__menu-mob').toggleClass('active');
          $('body').toggleClass('lock');
       });
-      $('.footer__col-title').addClass('panel-heading');
+      $('.footer__col-title').addClass('panel-heading-f');
    } else {
       $('.header__menu-close-mnu, .header__bottom-menu, .header__bottom-icon-menu').click(function (event) {
          $('.header__menu').toggleClass('active');
          $('body').toggleClass('lock');
          $('.menu__open').toggleClass('close');
       });
-      $('.footer__col-title').removeClass('panel-heading');
+      $('.footer__col-title').removeClass('panel-heading-f');
    };
    $('.header__bottom-search, .header__close-mob-search, .header__bottom-icon-search').click(function (event) {
       $('.header__search').toggleClass('active');
@@ -268,9 +296,27 @@ $(document).ready(function () {
       $('.s2-slide-link').text('Добавить');
       $('.a-s1-card-info-date-text-dost').text('доставка');
    }
-
+   $('.m-place-change, .header__close-mob-cart-delivery, .header__delivery-button').click(function (event) {
+      $('.header__delivery').toggleClass('active');
+      $('body').toggleClass('lock');
+      event.preventDefault();
+   });
    $('.header__registr-link-on-login, .header__close-mob-cart-login, .header__invite-login-registr').click(function (event) {
       $('.header__login').toggleClass('active');
+      $('body').toggleClass('lock');
+      event.preventDefault();
+   });
+
+   // Через запяятую укажите элементы, которые будут открывать и закрывать модальное окно с отзываом об интернет-магазине header__mark
+   // $('.header__close-mob-cart-mark').click(function (event) {
+   //    $('.header__mark').toggleClass('active');
+   //    $('body').toggleClass('lock');
+   //    event.preventDefault();
+   // });
+
+
+   $('.p-s2-rate-write, .header__close-mob-cart-rev').click(function (event) {
+      $('.header__rev').toggleClass('active');
       $('body').toggleClass('lock');
       event.preventDefault();
    });
@@ -278,6 +324,10 @@ $(document).ready(function () {
       $('.header__accaunt').toggleClass('active');
       $('body').toggleClass('lock');
       event.preventDefault();
+   });
+   $('.p-s2-all-proper').click(function (event) {
+      $(".p-s2-tab").removeClass("active").eq(1).addClass("active");
+      $(".tab_item-2").hide().eq(1).fadeIn();
    });
    if (w < '490') {
       $('.a-s1-tab').click(function (event) {
@@ -290,6 +340,10 @@ $(document).ready(function () {
       $('.header__registr').toggleClass('active');
       $('body').toggleClass('lock');
       event.preventDefault();
+   });
+   $('.m-pay-grid-item').click(function (event) {
+      $('.m-pay-grid-item').removeClass('active');
+      $(this).addClass('active');
    });
    $('.header__registr-link-on-login').click(function (event) {
       $('.header__registr').toggleClass('active');
@@ -338,17 +392,84 @@ $(document).ready(function () {
    $(".tab-1").click(function () {
       $(".tab-1").removeClass("active").eq($(this).index()).addClass("active");
       $(".tab_item-1").hide().eq($(this).index()).fadeIn();
-
    }).eq(0).addClass("active");
+
+
 
    $(".tab_item-2").hide();
    $(".tab_item-2").eq(0).fadeIn();
-   $(".tab-2").click(function () {
-      $(".tab-2").removeClass("active").eq($(this).index()).addClass("active");
+   $(".p-s2-tab").click(function () {
+      $(".p-s2-tab").removeClass("active").eq($(this).index()).addClass("active");
       $(".tab_item-2").hide().eq($(this).index()).fadeIn();
 
    }).eq(0).addClass("active");
 
+   $(".tab_item-y").hide();
+   $(".tab_item-y").eq(0).fadeIn();
+   $(".tab-y").click(function () {
+      $(".tab-y").removeClass("active").eq($(this).index()).addClass("active");
+      $(".tab_item-y").hide().eq($(this).index()).fadeIn();
+
+   }).eq(0).addClass("active");
+
+   $(".tab_item-3").hide();
+   $(".tab_item-3").eq(0).fadeIn();
+   $(".tab-3").click(function () {
+      $(".tab-3").removeClass("active").eq($(this).index()).addClass("active");
+      $(".tab_item-3").hide().eq($(this).index()).fadeIn();
+
+   }).eq(0).addClass("active");
+
+   $(".tab_item-m-1").hide();
+   $(".tab_item-m-1").eq(0).fadeIn();
+   $(".tab-m-1").click(function () {
+      $(".tab-m-1").removeClass("active").eq($(this).index()).addClass("active");
+      $(".tab_item-m-1").hide().eq($(this).index()).fadeIn();
+      if ($(this).index() == 0) {
+         $(".m-pay-grid").removeClass('some');
+      }
+      if ($(this).index() == 1) {
+         $(".m-pay-grid").addClass('some');
+      }
+      if ($(this).index() == 2) {
+         $(".m-pay-grid").addClass('some');
+      }
+
+   }).eq(0).addClass("active");
+
+
+   $(".tab_item-m-2").hide();
+   $(".tab_item-m-2").eq(0).fadeIn();
+   $(".tab-m-2").click(function () {
+      $(".tab-m-2").removeClass("active").eq($(this).index()).addClass("active");
+      $(".tab_item-m-2").hide().eq($(this).index()).fadeIn();
+
+   }).eq(0).addClass("active");
+
+   $(".tab_item-m-3").hide();
+   $(".tab_item-m-3").eq(0).fadeIn();
+   $(".tab-m-3").click(function () {
+      $(".tab-m-3").removeClass("active").eq($(this).index()).addClass("active");
+      $(".tab_item-m-3").hide().eq($(this).index()).fadeIn();
+
+   }).eq(0).addClass("active");
+
+   $(".tab_item-m-4").hide();
+   $(".tab_item-m-4").eq(0).fadeIn();
+   $(".tab-m-4").click(function () {
+      $(".tab-m-4").removeClass("active").eq($(this).index()).addClass("active");
+      $(".tab_item-m-4").hide().eq($(this).index()).fadeIn();
+
+   }).eq(0).addClass("active");
+
+   $(".pop-image-more").click(function () {
+      $(".pop-image").removeClass('hidden');
+      $(".pop-image-more").addClass('hide');
+   });
+   $(".w-work-more").click(function () {
+      $(".w-work-image").removeClass('hidden');
+      $(".w-work-more").addClass('hide');
+   });
 
    $(".a-s1-card-more").hide();
    $(".a-s1-card-info-button").click(function () {
@@ -357,12 +478,32 @@ $(document).ready(function () {
       $(".a-s1-title-mob").text('Информация о заказе');
    });
 
-   $('.panel-heading').removeClass('in').next().slideUp();
-   $('.panel-heading').click(function () {
+   $('.panel-heading-f').removeClass('in').next().slideUp();
+   $('.panel-heading-f').click(function () {
       $(this).toggleClass('in').next().slideToggle();
-      $('.panel-heading').not(this).removeClass('in').next().slideUp();
+      $('.panel-heading-f').not(this).removeClass('in').next().slideUp();
       event.preventDefault();
    });
+ $('.panel-heading-m').removeClass('in').next().slideUp();
+   $('.panel-heading-m.panel-heading-m-first').addClass('in').next().slideToggle();
+
+   $('.panel-heading-m').click(function () {
+      $(this).toggleClass('in').next().slideToggle();
+      $('.panel-heading-m').not(this).removeClass('in').next().slideUp();
+      event.preventDefault();
+   });
+
+
+   $('.popup').hide();
+   $('.p-s2-text-full').click(function () {
+      var popup_id = $('#' + $(this).attr("rel"));
+      $(popup_id).show();
+      $('body').toggleClass('lock');
+   })
+   $('.header__menu-close-pop, .popup-over').click(function () {
+      $('.popup').hide();
+      $('body').toggleClass('lock');
+   })
 });
 
 let myvgfbdSwiper = new Swiper('.slider-block', {
