@@ -1,3 +1,10 @@
+var highlightedItems = document.querySelectorAll('.swiper-container');
+
+highlightedItems.forEach(function(userItem) {
+  userItem.classList.add('swiper');
+});
+
+
 class DynamicAdapt {
    constructor(type) {
       this.type = type;
